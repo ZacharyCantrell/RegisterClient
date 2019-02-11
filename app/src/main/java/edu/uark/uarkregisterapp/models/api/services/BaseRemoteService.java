@@ -28,8 +28,7 @@ abstract class BaseRemoteService {
 	}
 
 	URL buildPath(PathElementInterface[] pathElements, String parameterValue) {
-		StringBuilder completePath = (new StringBuilder(https://zacharycantrell.herokuapp.com/api/product/test))
-				.append(this.apiObject.getPathValue());
+		StringBuilder completePath = (new StringBuilder("https://zacharycantrell.herokuapp.com/api/product/test")).append(this.apiObject.getPathValue());
 
 		for (PathElementInterface pathElement : pathElements) {
 			String pathEntry = pathElement.getPathValue();
