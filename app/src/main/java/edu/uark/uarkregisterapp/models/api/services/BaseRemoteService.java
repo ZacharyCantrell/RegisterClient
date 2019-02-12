@@ -28,7 +28,7 @@ abstract class BaseRemoteService {
 	}
 
 	URL buildPath(PathElementInterface[] pathElements, String parameterValue) {
-		StringBuilder completePath = (new StringBuilder("https://zacharycantrell.herokuapp.com/api/product/test")).append(this.apiObject.getPathValue());
+		StringBuilder completePath = (new StringBuilder(BASE_URL)).append(this.apiObject.getPathValue());
 
 		for (PathElementInterface pathElement : pathElements) {
 			String pathEntry = pathElement.getPathValue();
@@ -266,6 +266,6 @@ abstract class BaseRemoteService {
 	private static final String ACCEPT_REQUEST_PROPERTY = "Accept";
 	private static final String JSON_PAYLOAD_TYPE = "application/json";
 	private static final String CONTENT_TYPE_REQUEST_PROPERTY = "Content-Type";
-	private static final String BASE_URL = "https://uarkregserv.herokuapp.com/api/";
+	private static final String BASE_URL = "https://zacharycantrell.herokuapp.com/api/product/test";
 //	private static final String BASE_URL = "https://uarkregservnodejsapi.herokuapp.com/api/";
 }
